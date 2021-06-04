@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            position:absolute;
+            top:1%;
+            left:0;
+            right:0;
+            bottom:auto;
+            margin:auto;
+        }
+        div{
+            height:60px;
+            line-height:60px;
+            text-align:center;
+            font-size:20px;
+            color:white;
+        }
+        #div1{
+            background-color:red;
+        }
+        #div2{
+            background-color:blue;
+        }
+        #div3{
+            background-color:black;
+        }
+        #div4{
+            background-color:orange;
+        }
+        @media screen and (min-width:1200px) {
+            #container{
+                width:1200px;
+            }
+            div{
+                width:300px;
+                float:left;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            #container{
+                width:1095px;
+            }
+            #div1{
+                width:1095px;
+                float:none;
+            }
+            #div2,#div3,#div4{
+                float:left;
+                width:365px;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:992px) {
+            #container{
+                width:880px;
+            }
+            div{
+                width:440px;
+                float:left;
+            }
+        }
+        @media screen and (max-width:768px) {
+            #container{
+                width:600px;
+            }
+            div{
+                width:600px;
+                float:none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
+    </div>
+</body>
+</html>
